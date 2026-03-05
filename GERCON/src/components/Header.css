@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+  background-color: hsl(210, 100%, 45%);
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.header__icon {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.header__right:hover .header__icon {
+  transform: rotate(90deg);
+}
+
+.header__menu {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 98%;
+  height: 1px;
+  background-color: white;
+}
+
+.header__title {
+  margin: 0;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+  color: white;
+}
