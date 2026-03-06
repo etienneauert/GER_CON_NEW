@@ -36,12 +36,12 @@ function Numbers() {
   return (
     <section className="opener-numbers">
       <div className="opener-numbers__item">
-        <span className="opener-numbers__value">{revenue.toLocaleString('de-DE')} €</span>
-        <span className="opener-numbers__label">Umsatz</span>
-      </div>
-      <div className="opener-numbers__item">
         <span className="opener-numbers__value">{employees}</span>
         <span className="opener-numbers__label">Mitarbeiter</span>
+      </div>
+      <div className="opener-numbers__item">
+        <span className="opener-numbers__value">{revenue.toLocaleString('de-DE')} €</span>
+        <span className="opener-numbers__label">Umsatz</span>
       </div>
       <div className="opener-numbers__item">
         <span className="opener-numbers__value">{projects}</span>

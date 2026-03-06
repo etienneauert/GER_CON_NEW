@@ -26,6 +26,52 @@
   display: block;
 }
 
+.opener-header__claim {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+
+.opener-header__claim-track {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  min-width: 100%;
+  will-change: transform;
+}
+
+.opener-header__claim-text {
+  display: inline-flex;
+  align-items: center;
+  color: hsl(206deg 23% 10%);
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.45rem;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.opener-header__claim-icon {
+  margin: 0 1rem;
+  font-family: "Material Symbols Outlined";
+  font-size: 1.2rem;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  white-space: nowrap;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
 .opener-header__right {
   margin-left: auto;
   display: flex;
