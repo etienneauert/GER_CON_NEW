@@ -8,11 +8,13 @@
 .opener-explore__icon-frame {
   width: 5.5rem;
   height: 5.5rem;
+  padding: 0;
   border: 2px solid hsl(203deg 92% 39%);
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  background: transparent;
   cursor: pointer;
   transition: background-color 0.25s ease;
 }
