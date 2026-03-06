@@ -1,10 +1,11 @@
 import './App.css'
-import Header from './components/Header.jsx'
+import Opener from './components/Opener/Opener.jsx'
+
 
 function App() {
   return (
     <main>
-      <Header />
+      <Opener />
     </main>
   )
 }

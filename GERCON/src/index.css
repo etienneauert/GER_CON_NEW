@@ -6,6 +6,6 @@
 html, body, #root {
   width: 100%;
   min-height: 100vh;
-  background-color: hsl(210, 100%, 45%);
+  background-color: white;
   font-family: Helvetica, Arial, sans-serif;
 }

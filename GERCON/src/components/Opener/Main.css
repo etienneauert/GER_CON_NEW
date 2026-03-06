@@ -1,0 +1,36 @@
+.opener-main {
+  width: 100%;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.opener-main__title {
+  width: 95vw;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+  color: hsl(203deg 92% 39%);
+  font-family: "Arial Black", Helvetica, Arial, sans-serif;
+  font-size: 11vw;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.opener-main__title-amplify {
+  margin-left: 0.5em;
+}
+
+@media (max-width: 700px) {
+  .opener-main__title {
+    white-space: normal;
+    font-size: 13vw;
+  }
+
+  .opener-main__title-amplify {
+    display: block;
+    margin-top: 0.08em;
+    margin-left: 0;
+  }
+}

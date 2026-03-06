@@ -1,0 +1,33 @@
+.opener-explore {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+  width: 100%;
+}
+
+.opener-explore__icon-frame {
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 2px solid hsl(203deg 92% 39%);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.opener-explore__icon {
+  color: hsl(203deg 92% 39%);
+  font-size: 2rem;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.opener-explore__icon-frame:hover {
+  background-color: rgb(10 121 191);
+}
+
+.opener-explore__icon-frame:hover .opener-explore__icon {
+  color: white;
+}

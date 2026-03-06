@@ -1,3 +1,3 @@
-# Gercon
+# ATOS AMPLIFY GERMANY
 
 React + Vite Projekt.
