@@ -2,11 +2,11 @@ import './Explore.css'
 
 function Explore() {
   const handleExploreClick = () => {
-    const portfolioSection = document.getElementById('portfolio')
-    if (!portfolioSection) return
+    const visionSection = document.getElementById('vision')
+    if (!visionSection) return
 
     const startY = window.scrollY
-    const targetY = portfolioSection.getBoundingClientRect().top + window.scrollY
+    const targetY = visionSection.getBoundingClientRect().top + window.scrollY
     const distance = targetY - startY
     const durationMs = 1700
     const startTime = performance.now()
