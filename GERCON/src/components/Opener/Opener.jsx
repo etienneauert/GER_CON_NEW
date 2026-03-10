@@ -35,6 +35,23 @@ function Opener() {
           <span className="material-symbols-outlined opener__overlay-close-icon">close</span>
           CLOSE
         </button>
+        <nav
+          className={`opener__overlay-nav ${isOverlayOpen ? 'opener__overlay-nav--animate' : ''}`}
+          aria-label="Hauptnavigation"
+        >
+          <a href="#vision" className="opener__overlay-link" onClick={handleOverlayClose}>
+            Vision
+          </a>
+          <a href="#portfolio" className="opener__overlay-link" onClick={handleOverlayClose}>
+            Portfolio
+          </a>
+          <a href="#organigramm" className="opener__overlay-link" onClick={handleOverlayClose}>
+            Organigramm
+          </a>
+          <a href="#kontakt" className="opener__overlay-link" onClick={handleOverlayClose}>
+            Kontakt
+          </a>
+        </nav>
       </div>
     </section>
   )

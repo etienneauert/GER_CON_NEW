@@ -3,7 +3,7 @@
   min-height: 100vh;
   padding: 4rem 2rem;
   box-sizing: border-box;
-  background-color: #f7f9fc;
+  background-color: hsl(203deg 92% 39%);
 }
 
 .organigramm__content {
@@ -11,14 +11,33 @@
   margin: 0 auto;
 }
 
+.organigramm__eyebrow-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.organigramm__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 2rem;
+  border: 1px solid white;
+  border-radius: 999px;
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
 .organigramm__top,
 .organigramm__node,
 .organigramm__subnode {
-  border: 2px solid hsl(206deg 23% 10%);
+  border: 2px solid hsl(206deg 38% 24%);
   border-radius: 12px;
   padding: 0.9rem 1rem;
   text-align: center;
-  background-color: white;
+  background-color: hsl(206deg 35% 88%);
   font-weight: 700;
   color: hsl(206deg 23% 10%);
 }
@@ -32,6 +51,13 @@
   margin-top: 0.2rem;
   font-size: 0.95rem;
   font-style: italic;
+  font-weight: 500;
+}
+
+.organigramm__description {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
   font-weight: 500;
 }
 
