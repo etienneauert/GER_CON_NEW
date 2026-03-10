@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function DriveBusinessTransformation() {
   const [showTransformationDetails, setShowTransformationDetails] = useState(false)
@@ -6,6 +6,15 @@ function DriveBusinessTransformation() {
   const [activeSecondLayer, setActiveSecondLayer] = useState(null)
   const [showAiDetails, setShowAiDetails] = useState(false)
   const [showPlatformsDetails, setShowPlatformsDetails] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 900px)')
+    const update = () => setIsMobile(mediaQuery.matches)
+    update()
+    mediaQuery.addEventListener('change', update)
+    return () => mediaQuery.removeEventListener('change', update)
+  }, [])
 
   const getSecondLayerClass = (key) => {
     let base = 'portfolio-card portfolio-card--transformation portfolio-card--level2 portfolio-card--toggle'
@@ -16,7 +25,14 @@ function DriveBusinessTransformation() {
 
   return (
     <>
-      <div className="portfolio-grid">
+      <div
+        className={
+          'portfolio-grid' +
+          (showTransformationDetails ? ' portfolio-grid--active-transformation' : '') +
+          (showAiDetails ? ' portfolio-grid--active-ai' : '') +
+          (showPlatformsDetails ? ' portfolio-grid--active-platforms' : '')
+        }
+      >
         <div
           className={
             'portfolio-card portfolio-card--transformation portfolio-card--transformation-root portfolio-card--toggle' +
@@ -49,6 +65,110 @@ function DriveBusinessTransformation() {
         >
           <h2 className="portfolio-card__title">Unlock the value of AI</h2>
         </div>
+        {isMobile && showAiDetails && (
+          <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
+            <div className="portfolio-subgrid__item">
+              <div
+                className={
+                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
+                  (activeThirdLayer === 'ai-foundations' ? ' portfolio-card--is-active' : '')
+                }
+                onClick={() => {
+                  setActiveThirdLayer((prev) =>
+                    prev === 'ai-foundations' ? null : 'ai-foundations',
+                  )
+                }}
+              >
+                <h3 className="portfolio-card__title">Strengthen Data &amp; AI foundations</h3>
+              </div>
+              {activeThirdLayer === 'ai-foundations' && (
+                <div className="portfolio-thirdgrid portfolio-thirdgrid--inline">
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Define the strategy</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Improve governance</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Be AI responsible by design</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">
+                      Optimize data architecture and platform
+                    </h3>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="portfolio-subgrid__item">
+              <div
+                className={
+                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
+                  (activeThirdLayer === 'ai-ecosystem' ? ' portfolio-card--is-active' : '')
+                }
+                onClick={() => {
+                  setActiveThirdLayer((prev) =>
+                    prev === 'ai-ecosystem' ? null : 'ai-ecosystem',
+                  )
+                }}
+              >
+                <h3 className="portfolio-card__title">Leverage existing data ecosystem</h3>
+              </div>
+              {activeThirdLayer === 'ai-ecosystem' && (
+                <div className="portfolio-thirdgrid portfolio-thirdgrid--inline">
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">
+                      Generate insights from IoT data and optimize operations
+                    </h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Monetize data and services</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">
+                      Drive strategic decisions with intelligent insights
+                    </h3>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="portfolio-subgrid__item">
+              <div
+                className={
+                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
+                  (activeThirdLayer === 'ai-capitalize' ? ' portfolio-card--is-active' : '')
+                }
+                onClick={() => {
+                  setActiveThirdLayer((prev) =>
+                    prev === 'ai-capitalize' ? null : 'ai-capitalize',
+                  )
+                }}
+              >
+                <h3 className="portfolio-card__title">
+                  Capitalize on the potential of AI
+                </h3>
+              </div>
+              {activeThirdLayer === 'ai-capitalize' && (
+                <div className="portfolio-thirdgrid portfolio-thirdgrid--inline">
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Ignite awareness and innovate</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Design and prove AI value</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">
+                      Empower workforce with Generative AI
+                    </h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--ai portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Scale AI across enterprise</h3>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
         <div
           className={
             'portfolio-card portfolio-card--platforms portfolio-card--toggle' +
@@ -67,6 +187,74 @@ function DriveBusinessTransformation() {
             Maximize the potential of platforms &amp; hyperscalers
           </h2>
         </div>
+        {isMobile && showPlatformsDetails && (
+          <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
+            <div className="portfolio-subgrid__item">
+              <div
+                className={
+                  'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle' +
+                  (activeThirdLayer === 'platforms-enterprise' ? ' portfolio-card--is-active' : '')
+                }
+                onClick={() => {
+                  setActiveThirdLayer((prev) =>
+                    prev === 'platforms-enterprise' ? null : 'platforms-enterprise',
+                  )
+                }}
+              >
+                <h3 className="portfolio-card__title">
+                  Maximize potential of Enterprise platforms
+                </h3>
+              </div>
+              {activeThirdLayer === 'platforms-enterprise' && (
+                <div className="portfolio-thirdgrid portfolio-thirdgrid--inline">
+                  <div className="portfolio-card portfolio-card--platforms portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Provide strategic platform advisory</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--platforms portfolio-card--level3">
+                    <h3 className="portfolio-card__title">
+                      Transform Customer, Service, and Operations
+                    </h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--platforms portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Exploit the platform investment</h3>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="portfolio-subgrid__item">
+              <div
+                className={
+                  'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle' +
+                  (activeThirdLayer === 'platforms-cloud' ? ' portfolio-card--is-active' : '')
+                }
+                onClick={() => {
+                  setActiveThirdLayer((prev) =>
+                    prev === 'platforms-cloud' ? null : 'platforms-cloud',
+                  )
+                }}
+              >
+                <h3 className="portfolio-card__title">
+                  Maximize potential of cloud hyperscalers
+                </h3>
+              </div>
+              {activeThirdLayer === 'platforms-cloud' && (
+                <div className="portfolio-thirdgrid portfolio-thirdgrid--inline">
+                  <div className="portfolio-card portfolio-card--platforms portfolio-card--level3">
+                    <h3 className="portfolio-card__title">
+                      Define the cloud strategy and architecture
+                    </h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--platforms portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Evaluate hyperscalers providers</h3>
+                  </div>
+                  <div className="portfolio-card portfolio-card--platforms portfolio-card--level3">
+                    <h3 className="portfolio-card__title">Exploit the hyperscalers</h3>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
         {showTransformationDetails && (
           <div className="portfolio-subgrid portfolio-grid__subgrid">
             <div className="portfolio-subgrid__item">
@@ -206,7 +394,7 @@ function DriveBusinessTransformation() {
         )}
       </div>
 
-      {showAiDetails && (
+      {!isMobile && showAiDetails && (
         <>
           <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
             <div className="portfolio-subgrid__item">
@@ -313,7 +501,7 @@ function DriveBusinessTransformation() {
         </>
       )}
 
-      {showPlatformsDetails && (
+      {!isMobile && showPlatformsDetails && (
         <>
           <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
             <div className="portfolio-subgrid__item">

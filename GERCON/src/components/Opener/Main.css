@@ -26,11 +26,12 @@
   .opener-main__title {
     white-space: normal;
     font-size: 13vw;
+    margin-top: 3rem;
   }
 
   .opener-main__title-amplify {
     display: block;
-    margin-top: 0.08em;
+    margin-top: 0.2em;
     margin-left: 0;
   }
 }

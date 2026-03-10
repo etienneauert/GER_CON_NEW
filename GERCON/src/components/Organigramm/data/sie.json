@@ -1,0 +1,32 @@
+{
+  "department": "SIE",
+  "manager": "Armin Ratz",
+  "metrics": "26,25",
+  "employees": [
+    "Annika Gerstel",
+    "Yui Tamagaki",
+    "Teresa Albiez",
+    "Felix Drossler",
+    "Elisabeth Schachoff",
+    "Qianhui Zhou",
+    "Pasquale Pretzsch",
+    "Thea Fiedler",
+    "Molte Richert",
+    "Ellen Schomberg",
+    "Jonas Volger",
+    "Bennet Holscher",
+    "Leon BuBmann",
+    "Marie Poschner",
+    "Marius Kaiser",
+    "Philipp Busgen",
+    "Hanae En Najjari",
+    "Lorenz Mindorfer",
+    "Laura Kurz",
+    "Ranjith Mahendran",
+    "Siddharth Basireddy",
+    "Marvi Schubert",
+    "Maria Marchante Fernandez",
+    "Johanna Stahl",
+    "Maximilian Chrzon"
+  ]
+}

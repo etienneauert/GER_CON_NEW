@@ -46,3 +46,38 @@
   font-size: 2.3rem;
   font-weight: 700;
 }
+
+@media (max-width: 1200px) {
+  .opener-numbers {
+    margin-top: 90px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2rem;
+  }
+
+  .opener-numbers__item {
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .opener-numbers__item::before {
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+  }
+
+  .opener-numbers__item:first-child::before {
+    display: none;
+  }
+
+  .opener-numbers__value {
+    font-size: 2.8rem;
+  }
+
+  .opener-numbers__label {
+    font-size: 1.6rem;
+  }
+}

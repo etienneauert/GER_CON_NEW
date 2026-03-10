@@ -107,3 +107,27 @@
 .opener-header__right:hover .opener-header__icon {
   transform: rotate(90deg);
 }
+
+@media (max-width: 1200px) {
+  .opener-header__claim {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .opener-header {
+    padding: 0.4rem 1rem 0;
+  }
+
+  .opener-header__logo {
+    width: 8.5rem;
+  }
+
+  .opener-header__icon {
+    font-size: 1.2rem;
+  }
+
+  .opener-header__menu {
+    font-size: 1.5rem;
+  }
+}
