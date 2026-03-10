@@ -3,7 +3,7 @@
   min-height: 100vh;
   padding: 4rem 2rem;
   box-sizing: border-box;
-  background-color: hsl(203deg 92% 39%);
+  background-color: hsl(203deg 93% 39%);
 }
 
 .organigramm__content {
@@ -33,12 +33,21 @@
 .organigramm__top,
 .organigramm__node,
 .organigramm__subnode {
-  border: 2px solid hsl(206deg 38% 24%);
+  border: 2px solid hsl(0, 0%, 100%);
   border-radius: 12px;
   padding: 0.9rem 1rem;
   text-align: center;
-  background-color: hsl(206deg 35% 88%);
   font-weight: 700;
+}
+
+.organigramm__top {
+  background-color: hsl(203deg 93% 39%);
+  color: hsl(0, 0%, 100%);
+}
+
+.organigramm__node,
+.organigramm__subnode {
+  background-color: white;
   color: hsl(206deg 23% 10%);
 }
 
@@ -62,14 +71,17 @@
 }
 
 .organigramm__top {
-  width: min(100%, 360px);
+  width: min(100%, 1160px);
   margin: 0 auto 2rem;
+  padding: 1.4rem;
 }
 
 .organigramm__row {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
   gap: 1rem;
+  margin-top: 1.2rem;
 }
 
 .organigramm__node--expanded {
@@ -78,10 +90,32 @@
   gap: 1rem;
 }
 
+.organigramm__toggle-btn {
+  align-self: center;
+  border: 1px solid hsl(206deg 23% 10%);
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  background-color: white;
+  color: hsl(206deg 23% 10%);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.organigramm__toggle-btn:hover {
+  background-color: hsl(206deg 35% 94%);
+}
+
 .organigramm__subrow {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.7rem;
+}
+
+@media (max-width: 900px) {
+  .organigramm__row {
+    grid-template-columns: 1fr;
+  }
 }
 
 .organigramm__lists {
