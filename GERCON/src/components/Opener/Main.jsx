@@ -5,7 +5,7 @@ function Main() {
     <section className="opener-main">
       <h1 className="opener-main__title">
         <span>ATOS</span>
-        <span className="opener-main__title-amplify">AMPLIFY</span>
+        <span className="opener-main__title-amplify">AMPLIFY GERMANY</span>
       </h1>
     </section>
   )

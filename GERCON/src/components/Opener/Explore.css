@@ -34,3 +34,9 @@
 .opener-explore__icon-frame:hover .opener-explore__icon {
   color: white;
 }
+
+@media (max-width: 768px) {
+  .opener-explore {
+    margin-top: 3rem;
+  }
+}

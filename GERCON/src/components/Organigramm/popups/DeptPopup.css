@@ -11,11 +11,11 @@
 
 .dept-popup {
   position: relative;
-  width: min(100%, 640px);
-  max-height: 85vh;
+  width: min(100%, 900px);
+  max-height: 90vh;
   overflow-y: auto;
   border-radius: 16px;
-  padding: 2rem 2rem 1.6rem;
+  padding: 3rem 3rem 2.5rem;
   background-color: white;
   color: hsl(206deg 23% 10%);
   box-shadow: 0 16px 48px rgb(0 0 0 / 0.25);
@@ -40,25 +40,25 @@
 
 .dept-popup__title {
   margin: 0 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 800;
 }
 
 .dept-popup__text {
-  margin: 0 0 1.2rem;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  margin: 0 0 1.4rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
 }
 
 .dept-popup__section-title {
-  margin: 1.2rem 0 0.5rem;
-  font-size: 1.1rem;
+  margin: 1.5rem 0 0.6rem;
+  font-size: 1.25rem;
   font-weight: 700;
 }
 
 .dept-popup__list {
   margin: 0;
   padding-left: 1.4rem;
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
 }

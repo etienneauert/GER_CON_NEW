@@ -46,14 +46,7 @@ function Kontakt() {
               harry.mueller@atos.net
             </a>
           </article>
-          <article className="kontakt__box">
-            <h3 className="kontakt__name">Armin Ratz</h3>
-            <p className="kontakt__role">Principal Consultant Business Analytics</p>
-            <p className="kontakt__dept">GER CON SIE</p>
-            <a className="kontakt__email" href="mailto:armin.ratz@atos.net">
-              armin.ratz@atos.net
-            </a>
-          </article>
+
         </div>
       </div>
     </section>

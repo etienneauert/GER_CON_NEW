@@ -135,18 +135,57 @@
 }
 
 .portfolio-grid > .portfolio-card--transformation-root {
-  border-width: 3px;
-  border-color: hsl(240deg 100% 18%);
+  background-color: #f4d03f;
+  border: none;
+  color: hsl(206deg 23% 10%);
 }
 
 .portfolio-grid > .portfolio-card--ai {
-  border-width: 3px;
-  border-color: hsl(240deg 100% 18%);
+  background-color: #3b82f6;
+  border: none;
+  color: white;
 }
 
 .portfolio-grid > .portfolio-card--platforms {
-  border-width: 3px;
-  border-color: hsl(240deg 100% 18%);
+  background-color: #9ca3af;
+  border: none;
+  color: white;
+}
+
+.portfolio-card--transformation.portfolio-card--level2 {
+  background-color: #f9e580;
+  border: none;
+  color: hsl(206deg 23% 10%);
+}
+
+.portfolio-card--transformation.portfolio-card--level3 {
+  background-color: #fcf0b2;
+  border: none;
+  color: hsl(206deg 23% 10%);
+}
+
+.portfolio-card--ai.portfolio-card--level2 {
+  background-color: #6ea8f8;
+  border: none;
+  color: white;
+}
+
+.portfolio-card--ai.portfolio-card--level3 {
+  background-color: #a3c8fb;
+  border: none;
+  color: hsl(206deg 23% 10%);
+}
+
+.portfolio-card--platforms.portfolio-card--level2 {
+  background-color: #b8bec5;
+  border: none;
+  color: white;
+}
+
+.portfolio-card--platforms.portfolio-card--level3 {
+  background-color: #d4d8dd;
+  border: none;
+  color: hsl(206deg 23% 10%);
 }
 
 .portfolio-card--hidden {
@@ -165,6 +204,14 @@
 @media (max-width: 900px) {
   .portfolio-grid {
     grid-template-columns: 1fr;
+  }
+
+  .portfolio-card__icon {
+    display: none;
+  }
+
+  .portfolio-card__title {
+    white-space: normal;
   }
 
   .portfolio-grid--active-transformation .portfolio-grid__subgrid {
