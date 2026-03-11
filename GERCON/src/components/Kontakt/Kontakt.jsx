@@ -1,26 +1,58 @@
 import './Kontakt.css'
+import { useEffect, useRef } from 'react'
 
 function Kontakt() {
+  const sectionRef = useRef(null)
+
+  useEffect(() => {
+    const section = sectionRef.current
+    if (!section) return
+
+    const boxes = section.querySelectorAll('.kontakt__box')
+    boxes.forEach((box) => box.classList.add('kontakt__box--hidden'))
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('kontakt__box--visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.15 },
+    )
+
+    boxes.forEach((box, i) => {
+      box.style.transitionDelay = `${i * 120}ms`
+      observer.observe(box)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
-    <section id="kontakt" className="kontakt">
+    <section id="kontakt" className="kontakt" ref={sectionRef}>
       <div className="kontakt__content">
         <div className="kontakt__eyebrow-wrap">
           <span className="kontakt__eyebrow">KONTAKT</span>
         </div>
         <div className="kontakt__grid">
           <article className="kontakt__box">
-            <h3 className="kontakt__title">Ansprechpartner</h3>
-            <p className="kontakt__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
-            </p>
+            <h3 className="kontakt__name">Harry Müller</h3>
+            <p className="kontakt__role">Head of Consulting – Germany</p>
+            <p className="kontakt__dept">GER CON</p>
+            <a className="kontakt__email" href="mailto:harry.mueller@atos.net">
+              harry.mueller@atos.net
+            </a>
           </article>
           <article className="kontakt__box">
-            <h3 className="kontakt__title">Kontaktwege</h3>
-            <p className="kontakt__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam,
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </p>
+            <h3 className="kontakt__name">Armin Ratz</h3>
+            <p className="kontakt__role">Principal Consultant Business Analytics</p>
+            <p className="kontakt__dept">GER CON SIE</p>
+            <a className="kontakt__email" href="mailto:armin.ratz@atos.net">
+              armin.ratz@atos.net
+            </a>
           </article>
         </div>
       </div>

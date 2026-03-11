@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react'
+import transformationIcon from './icons/transformation.svg'
+import aiIcon from './icons/ai.svg'
+import platformsIcon from './icons/platforms.svg'
 
 function DriveBusinessTransformation() {
   const [showTransformationDetails, setShowTransformationDetails] = useState(false)
@@ -20,6 +23,24 @@ function DriveBusinessTransformation() {
     let base = 'portfolio-card portfolio-card--transformation portfolio-card--level2 portfolio-card--toggle'
     if (!activeSecondLayer) return base
     if (activeSecondLayer === key) return `${base} portfolio-card--active`
+    return `${base} portfolio-card--dim`
+  }
+
+  const aiKeys = ['ai-foundations', 'ai-ecosystem', 'ai-capitalize']
+  const getAiLayerClass = (key) => {
+    const base = 'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle'
+    const isAiActive = aiKeys.includes(activeThirdLayer)
+    if (!isAiActive) return base
+    if (activeThirdLayer === key) return `${base} portfolio-card--is-active`
+    return `${base} portfolio-card--dim`
+  }
+
+  const platformKeys = ['platforms-enterprise', 'platforms-cloud']
+  const getPlatformLayerClass = (key) => {
+    const base = 'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle'
+    const isPlatformActive = platformKeys.includes(activeThirdLayer)
+    if (!isPlatformActive) return base
+    if (activeThirdLayer === key) return `${base} portfolio-card--is-active`
     return `${base} portfolio-card--dim`
   }
 
@@ -47,6 +68,7 @@ function DriveBusinessTransformation() {
             setShowPlatformsDetails(false)
           }}
         >
+          <img src={transformationIcon} alt="" className="portfolio-card__icon" />
           <h2 className="portfolio-card__title">Drive business transformation</h2>
         </div>
         <div
@@ -63,16 +85,14 @@ function DriveBusinessTransformation() {
             setShowPlatformsDetails(false)
           }}
         >
+          <img src={aiIcon} alt="" className="portfolio-card__icon" />
           <h2 className="portfolio-card__title">Unlock the value of AI</h2>
         </div>
         {isMobile && showAiDetails && (
           <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'ai-foundations' ? ' portfolio-card--is-active' : '')
-                }
+                className={getAiLayerClass('ai-foundations')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'ai-foundations' ? null : 'ai-foundations',
@@ -102,10 +122,7 @@ function DriveBusinessTransformation() {
             </div>
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'ai-ecosystem' ? ' portfolio-card--is-active' : '')
-                }
+                className={getAiLayerClass('ai-ecosystem')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'ai-ecosystem' ? null : 'ai-ecosystem',
@@ -134,10 +151,7 @@ function DriveBusinessTransformation() {
             </div>
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'ai-capitalize' ? ' portfolio-card--is-active' : '')
-                }
+                className={getAiLayerClass('ai-capitalize')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'ai-capitalize' ? null : 'ai-capitalize',
@@ -183,6 +197,7 @@ function DriveBusinessTransformation() {
             setActiveThirdLayer(null)
           }}
         >
+          <img src={platformsIcon} alt="" className="portfolio-card__icon" />
           <h2 className="portfolio-card__title">
             Maximize the potential of platforms &amp; hyperscalers
           </h2>
@@ -191,10 +206,7 @@ function DriveBusinessTransformation() {
           <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'platforms-enterprise' ? ' portfolio-card--is-active' : '')
-                }
+                className={getPlatformLayerClass('platforms-enterprise')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'platforms-enterprise' ? null : 'platforms-enterprise',
@@ -223,10 +235,7 @@ function DriveBusinessTransformation() {
             </div>
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'platforms-cloud' ? ' portfolio-card--is-active' : '')
-                }
+                className={getPlatformLayerClass('platforms-cloud')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'platforms-cloud' ? null : 'platforms-cloud',
@@ -399,10 +408,7 @@ function DriveBusinessTransformation() {
           <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'ai-foundations' ? ' portfolio-card--is-active' : '')
-                }
+                className={getAiLayerClass('ai-foundations')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'ai-foundations' ? null : 'ai-foundations',
@@ -432,10 +438,7 @@ function DriveBusinessTransformation() {
             </div>
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'ai-ecosystem' ? ' portfolio-card--is-active' : '')
-                }
+                className={getAiLayerClass('ai-ecosystem')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'ai-ecosystem' ? null : 'ai-ecosystem',
@@ -464,10 +467,7 @@ function DriveBusinessTransformation() {
             </div>
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--ai portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'ai-capitalize' ? ' portfolio-card--is-active' : '')
-                }
+                className={getAiLayerClass('ai-capitalize')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'ai-capitalize' ? null : 'ai-capitalize',
@@ -506,10 +506,7 @@ function DriveBusinessTransformation() {
           <div className="portfolio-subgrid portfolio-grid__subgrid portfolio-grid__subgrid--spaced">
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'platforms-enterprise' ? ' portfolio-card--is-active' : '')
-                }
+                className={getPlatformLayerClass('platforms-enterprise')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'platforms-enterprise' ? null : 'platforms-enterprise',
@@ -538,10 +535,7 @@ function DriveBusinessTransformation() {
             </div>
             <div className="portfolio-subgrid__item">
               <div
-                className={
-                  'portfolio-card portfolio-card--platforms portfolio-card--level2 portfolio-card--toggle' +
-                  (activeThirdLayer === 'platforms-cloud' ? ' portfolio-card--is-active' : '')
-                }
+                className={getPlatformLayerClass('platforms-cloud')}
                 onClick={() => {
                   setActiveThirdLayer((prev) =>
                     prev === 'platforms-cloud' ? null : 'platforms-cloud',

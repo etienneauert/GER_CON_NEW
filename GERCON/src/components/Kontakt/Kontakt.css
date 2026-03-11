@@ -43,15 +43,46 @@
   color: hsl(206deg 23% 10%);
 }
 
-.kontakt__title {
-  margin: 0 0 0.6rem;
-  font-size: 1.2rem;
+.kontakt__name {
+  margin: 0 0 0.3rem;
+  font-size: 1.25rem;
+  font-weight: 800;
 }
 
-.kontakt__text {
-  margin: 0;
-  line-height: 1.45;
+.kontakt__role {
+  margin: 0 0 0.5rem;
   font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.kontakt__dept {
+  margin: 0 0 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  opacity: 0.7;
+}
+
+.kontakt__email {
+  font-size: 0.95rem;
+  color: hsl(203deg 93% 39%);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.kontakt__email:hover {
+  text-decoration: underline;
+}
+
+.kontakt__box--hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.kontakt__box--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 @media (max-width: 900px) {

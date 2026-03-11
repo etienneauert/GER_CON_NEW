@@ -5,8 +5,8 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: 100vh;
   padding-top: 50px;
+  padding-bottom: 4rem;
   box-sizing: border-box;
   background-color: white;
   overflow: visible;
@@ -20,7 +20,7 @@
 .portfolio__eyebrow-wrap {
   display: flex;
   justify-content: center;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 .portfolio__eyebrow {
@@ -71,6 +71,9 @@
 }
 
 .portfolio-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
   border: 1px solid rgb(15 35 53 / 0.32);
   border-radius: 14px;
   padding: 1rem;
@@ -82,10 +85,17 @@
     background-color 0.2s ease;
 }
 
+.portfolio-card__icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  flex-shrink: 0;
+}
+
 .portfolio-card__title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.95rem;
   line-height: 1.35;
+  white-space: nowrap;
 }
 
 .portfolio-card--toggle .portfolio-card__title {
@@ -126,17 +136,30 @@
 
 .portfolio-grid > .portfolio-card--transformation-root {
   border-width: 3px;
-  border-color: #f4d03f;
+  border-color: hsl(240deg 100% 18%);
 }
 
 .portfolio-grid > .portfolio-card--ai {
   border-width: 3px;
-  border-color: #3b82f6;
+  border-color: hsl(240deg 100% 18%);
 }
 
 .portfolio-grid > .portfolio-card--platforms {
   border-width: 3px;
-  border-color: #9ca3af;
+  border-color: hsl(240deg 100% 18%);
+}
+
+.portfolio-card--hidden {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.portfolio-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 @media (max-width: 900px) {
