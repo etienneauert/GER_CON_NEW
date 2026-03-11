@@ -1,6 +1,9 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html, body, #root {
@@ -8,4 +11,8 @@ html, body, #root {
   min-height: 100vh;
   background-color: white;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }

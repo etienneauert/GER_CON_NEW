@@ -3,7 +3,8 @@
   padding: 1rem 1.5rem;
   box-sizing: border-box;
   text-align: center;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
   color: white;
   background-color: hsl(206deg 23% 10%);
   font-size: 0.9rem;

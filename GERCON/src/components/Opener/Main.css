@@ -7,6 +7,7 @@
 
 .opener-main__title {
   width: 95vw;
+  max-width: 100%;
   margin: 0;
   text-align: center;
   white-space: nowrap;

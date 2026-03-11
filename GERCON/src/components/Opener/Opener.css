@@ -72,8 +72,8 @@
 .opener__overlay-nav {
   position: absolute;
   top: 9rem;
-  left: 1vw;
-  width: 98vw;
+  left: 1rem;
+  right: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
