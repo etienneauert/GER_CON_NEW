@@ -10,7 +10,7 @@ html, body, #root {
   width: 100%;
   min-height: 100vh;
   background-color: white;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Biennale", Helvetica, Arial, sans-serif;
 }
 
 body {

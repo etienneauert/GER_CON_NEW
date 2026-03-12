@@ -39,10 +39,15 @@ function Kontakt() {
         </div>
         <div className="kontakt__grid">
           <article className="kontakt__box">
+            <div className="kontakt__avatar">
+              <span className="material-symbols-outlined kontakt__avatar-icon">person</span>
+            </div>
             <h3 className="kontakt__name">Harry Müller</h3>
             <p className="kontakt__role">Head of Consulting – Germany</p>
-            <p className="kontakt__dept">GER CON</p>
+            <span className="kontakt__dept-badge">GER CON</span>
+            <div className="kontakt__divider" />
             <a className="kontakt__email" href="mailto:harry.mueller@atos.net">
+              <span className="material-symbols-outlined kontakt__email-icon">mail</span>
               harry.mueller@atos.net
             </a>
           </article>

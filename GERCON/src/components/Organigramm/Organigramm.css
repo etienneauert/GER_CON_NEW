@@ -34,7 +34,7 @@
 .organigramm__top,
 .organigramm__node,
 .organigramm__subnode {
-  border: 2px solid hsl(240deg 100% 18%);
+  border: 1px solid hsl(240deg 100% 18%);
   border-radius: 12px;
   padding: 0.9rem 1rem;
   box-sizing: border-box;
@@ -44,7 +44,7 @@
 
 .organigramm__top {
   background-color: hsl(203deg 93% 39%);
-  color: hsl(0, 0%, 100%);
+  color: hsl(240deg 100% 18%);
 }
 
 .organigramm__node,
