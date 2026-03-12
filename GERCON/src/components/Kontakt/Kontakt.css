@@ -38,13 +38,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem 3rem 2rem;
+  padding: 3rem 5rem 2.5rem;
   border-radius: 20px;
   background-color: hsl(240deg 100% 18%);
   color: white;
   text-align: center;
   box-shadow: 0 8px 32px rgb(0 0 0 / 0.12);
-  min-width: 300px;
+  min-width: 500px;
 }
 
 .kontakt__avatar {
@@ -72,7 +72,7 @@
 
 .kontakt__role {
   margin: 0 0 0.8rem;
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   line-height: 1.4;
   opacity: 0.85;
 }
@@ -82,7 +82,7 @@
   padding: 0.25rem 1rem;
   border: 1px solid rgba(255 255 255 / 0.4);
   border-radius: 999px;
-  font-size: 0.8rem;
+  font-size: 1.15rem;
   font-weight: 600;
   letter-spacing: 0.06em;
   opacity: 0.8;
@@ -99,7 +99,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.95rem;
+  font-size: 1.35rem;
   color: hsl(203deg 93% 70%);
   text-decoration: none;
   font-weight: 600;

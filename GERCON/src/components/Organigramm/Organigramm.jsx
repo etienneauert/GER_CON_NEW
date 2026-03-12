@@ -27,6 +27,7 @@ function Organigramm() {
           <div className="organigramm__row">
             <div className="organigramm__node organigramm__node--expanded">
               <div className="organigramm__dept">{ocm.department}</div>
+              <div className="organigramm__divider" />
               <p className="organigramm__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in
                 reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
@@ -41,6 +42,7 @@ function Organigramm() {
             </div>
             <div className="organigramm__node organigramm__node--expanded">
               <div className="organigramm__dept">{sie.department}</div>
+              <div className="organigramm__divider" />
               <p className="organigramm__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis
                 nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -55,6 +57,7 @@ function Organigramm() {
             </div>
             <div className="organigramm__node organigramm__node--expanded">
               <div className="organigramm__dept">{bt.department}</div>
+              <div className="organigramm__divider" />
               <p className="organigramm__description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis
                 iste natus error sit voluptatem accusantium doloremque laudantium.
