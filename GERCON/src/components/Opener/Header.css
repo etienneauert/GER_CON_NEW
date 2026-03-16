@@ -76,6 +76,46 @@
   margin-left: auto;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.opener-header__lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.opener-header__lang-btn {
+  border: 0;
+  padding: 0.2rem 0.5rem;
+  background: transparent;
+  color: hsl(203deg 92% 39%);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.opener-header__lang-btn:hover {
+  opacity: 1;
+}
+
+.opener-header__lang-btn--active {
+  opacity: 1;
+  font-weight: 800;
+}
+
+.opener-header__lang-sep {
+  color: hsl(203deg 92% 39%);
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.opener-header__menu-btn {
+  display: flex;
+  align-items: center;
   gap: 0.35rem;
   border: 0;
   padding: 0;
@@ -104,7 +144,7 @@
   letter-spacing: 0.04em;
 }
 
-.opener-header__right:hover .opener-header__icon {
+.opener-header__menu-btn:hover .opener-header__icon {
   transform: rotate(90deg);
 }
 

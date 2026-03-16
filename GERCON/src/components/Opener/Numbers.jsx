@@ -1,7 +1,11 @@
 import './Numbers.css'
 import { useEffect, useState } from 'react'
+import { useTranslation } from '../../translations.js'
+import { useLanguage } from '../../context/LanguageContext.jsx'
 
 function Numbers() {
+  const { t } = useTranslation()
+  const { language } = useLanguage()
   const [revenue, setRevenue] = useState(0)
   const [employees, setEmployees] = useState(0)
   const [projects, setProjects] = useState(0)
@@ -37,15 +41,15 @@ function Numbers() {
     <section className="opener-numbers">
       <div className="opener-numbers__item">
         <span className="opener-numbers__value">{employees}</span>
-        <span className="opener-numbers__label">Mitarbeiter</span>
+        <span className="opener-numbers__label">{t('numbers.employees')}</span>
       </div>
       <div className="opener-numbers__item">
-        <span className="opener-numbers__value">{revenue.toLocaleString('de-DE')} €</span>
-        <span className="opener-numbers__label">Umsatz</span>
+        <span className="opener-numbers__value">{revenue.toLocaleString(language === 'de' ? 'de-DE' : 'en-US')} €</span>
+        <span className="opener-numbers__label">{t('numbers.revenue')}</span>
       </div>
       <div className="opener-numbers__item">
         <span className="opener-numbers__value">{projects}</span>
-        <span className="opener-numbers__label">Kundenprjekte</span>
+        <span className="opener-numbers__label">{t('numbers.projects')}</span>
       </div>
     </section>
   )

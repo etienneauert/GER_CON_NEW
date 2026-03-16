@@ -1,8 +1,10 @@
 import "./Vision.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { useTranslation } from "../../translations.js";
 
 function Vision() {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
   const textRef = useRef(null);
 
@@ -46,15 +48,10 @@ function Vision() {
     <section id="vision" className="vision" ref={sectionRef}>
       <div className="vision__content">
         <div className="vision__eyebrow-wrap">
-          <span className="vision__eyebrow">VISION</span>
+          <span className="vision__eyebrow">{t("vision.eyebrow")}</span>
         </div>
         <p className="vision__text" ref={textRef}>
-          Wir gestalten die Zukunft von Unternehmen durch datengetriebene Beratung,
-          kuenstliche Intelligenz und digitale Innovation. Als Consulting-Abteilung
-          entwickeln wir End-to-End-Loesungen, die Prozesse vereinfachen,
-          Entscheidungen beschleunigen und nachhaltigen Mehrwert schaffen. Gemeinsam
-          mit unseren Kundinnen und Kunden machen wir aus Ideen skalierbare
-          digitale Loesungen mit messbarer Wirkung.
+          {t("vision.text")}
         </p>
       </div>
     </section>

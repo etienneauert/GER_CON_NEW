@@ -1,7 +1,9 @@
 import './Kontakt.css'
 import { useEffect, useRef } from 'react'
+import { useTranslation } from '../../translations.js'
 
 function Kontakt() {
+  const { t } = useTranslation()
   const sectionRef = useRef(null)
 
   useEffect(() => {
@@ -35,7 +37,7 @@ function Kontakt() {
     <section id="kontakt" className="kontakt" ref={sectionRef}>
       <div className="kontakt__content">
         <div className="kontakt__eyebrow-wrap">
-          <span className="kontakt__eyebrow">KONTAKT</span>
+          <span className="kontakt__eyebrow">{t('kontakt.eyebrow')}</span>
         </div>
         <div className="kontakt__grid">
           <article className="kontakt__box">
@@ -43,8 +45,8 @@ function Kontakt() {
               <span className="material-symbols-outlined kontakt__avatar-icon">person</span>
             </div>
             <h3 className="kontakt__name">Harry Müller</h3>
-            <p className="kontakt__role">Head of Consulting – Germany</p>
-            <span className="kontakt__dept-badge">GER CON</span>
+            <p className="kontakt__role">{t('kontakt.role')}</p>
+            <span className="kontakt__dept-badge">{t('kontakt.deptBadge')}</span>
             <div className="kontakt__divider" />
             <a className="kontakt__email" href="mailto:harry.mueller@atos.net">
               <span className="material-symbols-outlined kontakt__email-icon">mail</span>

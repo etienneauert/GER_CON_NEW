@@ -1,7 +1,9 @@
 import './Footer.css'
+import { useTranslation } from '../../translations.js'
 
 function Footer() {
-  return <footer className="app-footer">Copyright © 2026 ATOS AMPLIFY GERMANY</footer>
+  const { t } = useTranslation()
+  return <footer className="app-footer">{t('footer.copyright')}</footer>
 }
 
 export default Footer

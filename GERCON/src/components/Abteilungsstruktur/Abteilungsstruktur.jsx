@@ -1,4 +1,4 @@
-import './Organigramm.css'
+import './Abteilungsstruktur.css'
 import { useState } from 'react'
 import gercon from './data/gercon.json'
 import ocm from './data/ocm.json'
@@ -7,15 +7,17 @@ import bt from './data/bt.json'
 import OcmPopup from './popups/OcmPopup.jsx'
 import SiePopup from './popups/SiePopup.jsx'
 import BtPopup from './popups/BtPopup.jsx'
+import { useTranslation } from '../../translations.js'
 
-function Organigramm() {
+function Abteilungsstruktur() {
   const [activePopup, setActivePopup] = useState(null)
+  const { t } = useTranslation()
 
   return (
-    <section id="organigramm" className="organigramm">
+    <section id="abteilungsstruktur" className="organigramm">
       <div className="organigramm__content">
         <div className="organigramm__eyebrow-wrap">
-          <span className="organigramm__eyebrow">ABTEILUNGSSTRUKTUR</span>
+          <span className="organigramm__eyebrow">{t('abteilungsstruktur.eyebrow')}</span>
         </div>
         <div className="organigramm__top">
           <div className="organigramm__dept">{gercon.department}</div>
@@ -37,7 +39,7 @@ function Organigramm() {
                 className="organigramm__toggle-btn"
                 onClick={() => setActivePopup('ocm')}
               >
-                Mehr
+                {t('abteilungsstruktur.mehr')}
               </button>
             </div>
             <div className="organigramm__node organigramm__node--expanded">
@@ -52,7 +54,7 @@ function Organigramm() {
                 className="organigramm__toggle-btn"
                 onClick={() => setActivePopup('sie')}
               >
-                Mehr
+                {t('abteilungsstruktur.mehr')}
               </button>
             </div>
             <div className="organigramm__node organigramm__node--expanded">
@@ -67,7 +69,7 @@ function Organigramm() {
                 className="organigramm__toggle-btn"
                 onClick={() => setActivePopup('bt')}
               >
-                Mehr
+                {t('abteilungsstruktur.mehr')}
               </button>
             </div>
           </div>
@@ -81,4 +83,4 @@ function Organigramm() {
   )
 }
 
-export default Organigramm
+export default Abteilungsstruktur
